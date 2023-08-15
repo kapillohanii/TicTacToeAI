@@ -1,0 +1,121 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #996E89;
+    font-family: "Comfortaa", sans-serif;
+}
+
+h1 {
+    font-family: "Lobster", serif;
+}
+
+.message {
+    color: #fff;
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+form {
+    label {
+        font-size: 4em;
+        font-weight: bold;
+        vertical-align: middle;
+    }
+
+    input[type=radio] {
+        margin: 1em;
+        cursor: pointer;
+    }
+
+    fieldset {
+        display: block;
+        opacity: 1;
+        transition: all ease 2s;
+    }
+
+    &.game-on fieldset {
+        opacity: 0;
+        display: none;
+    }
+
+    &.game-on button {
+        opacity: 1;
+        display: block;
+        margin-top: 1em;
+    }
+
+}
+
+/* Add these styles to center the grid and evenly distribute columns */
+#grid-section {
+    margin: 3em 0;
+    display: flex;
+    justify-content: center;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    max-width: 400px; /* Set a maximum width for the grid */
+    margin: 0 auto; /* Center the grid within its container */
+}
+
+
+
+li {
+    border: 1px solid #000;
+    width: 100px;
+    height: 100px;
+    display: block;
+    float: left;
+    font-size: 3em;
+    text-align: center;
+    padding: .5em;
+}
+
+#c1,
+#c2,
+#c3 {
+    border-top: none;
+}
+
+#c3,
+#c6,
+#c9 {
+    border-right: none;
+}
+
+#c7,
+#c8,
+#c9 {
+    border-bottom: none;
+}
+
+#c1,
+#c4,
+#c7 {
+    border-left: none;
+}
+
+.winner {
+    color: #9AE1E5;
+}
+
+/* ... Your existing CSS ... */
+.game-on button {
+    display: block;
+    margin: 10px auto;
+}
+
+
